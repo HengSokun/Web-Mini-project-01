@@ -1,0 +1,505 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mini Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.css"  rel="stylesheet" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/1.6.3/flowbite.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/tw-elements/dist/css/index.min.css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.jsdelivr.net/npm/tw-elements/dist/js/index.min.js"></script>
+
+</head>
+<body>
+  
+  <!-- Navbar -->
+  <nav class="bg-white border-gray-200 px-2 sm:px-4 py-2.5 dark:bg-gray-900 fixed w-full" style="z-index: 1;">
+    <div class="container flex flex-wrap items-center justify-between mx-auto">
+    <a href="home.html" class="flex items-center">
+        <img src="https://flowbite.com/docs/images/logo.svg" class="h-6 mr-3 sm:h-9" alt="Logo" />
+        <span class="self-center text-xl font-semibold whitespace-nowrap dark:text-white">Tech & Science News</span>
+    </a>
+    <div class="flex md:order-2">
+      <button type="button" data-collapse-toggle="navbar-search" aria-controls="navbar-search" aria-expanded="false" class="md:hidden text-gray-500 dark:text-gray-400 hover:bg-gray-100 dark:hover:bg-gray-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 rounded-lg text-sm p-2.5 mr-1" >
+        <svg class="w-5 h-5" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+        <span class="sr-only">Search</span>
+      </button>
+      <div class="relative hidden md:block">
+        <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+          <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+          <span class="sr-only">Search icon</span>
+        </div>
+        <input type="text" id="search-navbar" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+      </div>
+      <button data-collapse-toggle="navbar-search" type="button" class="inline-flex items-center p-2 text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-search" aria-expanded="false">
+        <span class="sr-only">Open menu</span>
+        <svg class="w-6 h-6" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z" clip-rule="evenodd"></path></svg>
+      </button>
+    </div>
+      <div class="items-center justify-between hidden w-full md:flex md:w-auto md:order-1" id="navbar-search">
+        <div class="relative mt-3 md:hidden">
+          <div class="absolute inset-y-0 left-0 flex items-center pl-3 pointer-events-none">
+            <svg class="w-5 h-5 text-gray-500" aria-hidden="true" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" d="M8 4a4 4 0 100 8 4 4 0 000-8zM2 8a6 6 0 1110.89 3.476l4.817 4.817a1 1 0 01-1.414 1.414l-4.816-4.816A6 6 0 012 8z" clip-rule="evenodd"></path></svg>
+          </div>
+          <input type="text" id="search-navbar" class="block w-full p-2 pl-10 text-sm text-gray-900 border border-gray-300 rounded-lg bg-gray-50 focus:ring-blue-500 focus:border-blue-500 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500" placeholder="Search...">
+        </div>
+        <ul class="flex flex-col p-4 mt-4 border border-gray-100 rounded-lg bg-gray-50 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium md:border-0 md:bg-white dark:bg-gray-800 md:dark:bg-gray-900 dark:border-gray-700">
+          <li>
+            <a href="home.html" class="block py-2 pl-3 pr-4 text-white border-b-2 lg:border-b-2 lg:border-blue-500 border-blue-500 bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white" aria-current="page">Home</a>
+          </li>
+          <li>
+            <a href="blogs.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent border-b-2 lg:border-b-2 lg:border-blue-500 border-blue-500 md:hover:text-blue-700 md:p-0 md:dark:hover:text-white dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Blog</a>
+          </li>
+          <li>
+            <a href="contact.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent border-b-2 lg:border-b-2 lg:border-blue-500 border-blue-500 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">Contact</a>
+          </li>
+          <li>
+            <a href="about us.html" class="block py-2 pl-3 pr-4 text-gray-700 rounded hover:bg-gray-100 md:hover:bg-transparent border-b-2 lg:border-b-2 lg:border-blue-500 border-blue-500 md:hover:text-blue-700 md:p-0 dark:text-gray-400 md:dark:hover:text-white dark:hover:bg-gray-700 dark:hover:text-white md:dark:hover:bg-transparent dark:border-gray-700">About</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+
+<!-- ------------- -->
+<!-- Starting blog -->
+  <h1 class="text-gray-800 text-2xl sm:text-3xl font-bold text-center mb-4 md:mb-6">Home</h1>
+  <div class="bg-white py-5 sm:py-8 lg:py-12">
+    <div class="container px-5 py-5 mx-auto" bis_skin_checked="1">
+      <div class="flex justify-between items-center gap-8 mb-4 sm:mb-8 md:mb-12">
+        
+        <div class="flex items-center gap-12">
+          <div class="h-1 bg-gray-200 rounded overflow-hidden" bis_skin_checked="1">
+            <div class="w-24 h-full bg-indigo-500" bis_skin_checked="1"></div>
+          </div>
+          <h2 class="text-gray-800 text-2xl lg:text-3xl font-bold">READ</h2>
+          <p class="max-w-screen-sm hidden md:block text-gray-500">This is a section of some simple filler text, also known as placeholder text. It shares some characteristics of a real written text.</p>
+        </div>
+      </div>
+
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 xl:gap-8">
+
+      </div>
+
+      <div class="grid grid-cols-2 sm:grid-cols-3 gap-4 md:gap-6 xl:gap-8">
+        <!-- image - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">July 19, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">New trends in Tech</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- image - end -->
+
+        <!-- image - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 md:col-span-2 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">April 07, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">Working with legacy stacks</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- image - end -->
+
+        <!-- image - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 md:col-span-2 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Magicle" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">March 15, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">10 best smartphones for devs</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- image - end -->
+
+        <!-- image - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">January 27, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">8 High performance Notebooks</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- image - end -->
+      </div>
+    </div>
+  </div>
+
+<!-- article list -->
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto" bis_skin_checked="1">
+      <div class="flex flex-col" bis_skin_checked="1">
+        <div class="h-1 bg-gray-200 rounded overflow-hidden" bis_skin_checked="1">
+          <div class="w-24 h-full bg-indigo-500" bis_skin_checked="1"></div>
+        </div>
+        <div class="flex flex-wrap sm:flex-row flex-col py-6 mb-12" bis_skin_checked="1">
+          <h1 class="sm:w-2/5 text-gray-900 font-medium title-font text-2xl mb-2 sm:mb-0">Space The Final Frontier</h1>
+          <p class="sm:w-3/5 leading-relaxed text-base sm:pl-10 pl-0">Street art subway tile salvia four dollar toast bitters selfies quinoa yuccie synth meditation iPhone intelligentsia prism tofu. Viral gochujang bitters dreamcatcher.</p>
+        </div>
+      </div>
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 xl:gap-8">
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">July 19, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">New trends in Tech</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">April 07, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">Working with legacy stacks</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Magicle" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">March 15, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">10 best smartphones for devs</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">January 27, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">8 High performance Notebooks</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+      </div>
+    </div>
+  </section>
+
+  
+  <!-- ad - start -->
+  <div class="container px-2 py-0 mx-auto" bis_skin_checked="1">
+    <div class="bg-white py-6 sm:py-8">
+        <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+          <div class="md:h-80 flex flex-col sm:flex-row bg-gray-900 rounded-lg overflow-hidden">
+            <!-- content - start -->
+            <div class="w-full sm:w-1/2 lg:w-2/5 flex flex-col p-4 sm:p-8">
+              <h2 class="text-white text-xl md:text-2xl lg:text-4xl font-bold mb-4">Summer Sale<br />Up to 50% off.</h2>
+
+              <p class="max-w-md text-gray-400 mb-8">Buy our new product, now! The world's best clothing shop with the best price ever.</p>
+
+              <div class="mt-auto">
+                <a href="#" class="inline-block bg-white hover:bg-gray-100 active:bg-gray-200 focus-visible:ring ring-indigo-300 text-gray-800 text-sm md:text-base font-semibold text-center rounded-lg outline-none transition duration-100 px-8 py-3">Save now</a>
+              </div>
+            </div>
+            <!-- content - end -->
+
+            <!-- image - start -->
+            <div class="w-full sm:w-1/2 lg:w-3/5 h-48 sm:h-auto order-first sm:order-none bg-gray-700">
+              <img src="https://images.unsplash.com/photo-1505846951821-e25bacf2eccd?auto=format&q=75&fit=crop&crop=top&w=1000&h=500" loading="lazy" alt="Photo by Dom Hill" class="w-full h-full object-cover object-center" />
+            </div>
+            <!-- image - end -->
+          </div>
+        </div>
+      </div>
+  </div>
+  <!-- ad- end -->
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto" bis_skin_checked="1">
+      <div class="flex flex-wrap w-full mb-20" bis_skin_checked="1">
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0" bis_skin_checked="1">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Pitchfork Kickstarter Taxidermy</h1>
+          <div class="h-1 w-20 bg-indigo-500 rounded" bis_skin_checked="1"></div>
+        </div>
+        <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 xl:gap-8">
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">July 19, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">New trends in Tech</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">April 07, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">Working with legacy stacks</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Magicle" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">March 15, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">10 best smartphones for devs</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">January 27, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">8 High performance Notebooks</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+      </div>
+    </div>
+  </section>
+
+  <section class="text-gray-600 body-font">
+    <div class="container px-5 py-8 mx-auto" bis_skin_checked="1">
+      <div class="flex flex-wrap w-full mb-20" bis_skin_checked="1">
+        <div class="lg:w-1/2 w-full mb-6 lg:mb-0" bis_skin_checked="1">
+          <h1 class="sm:text-3xl text-2xl font-medium title-font mb-2 text-gray-900">Pitchfork Kickstarter Taxidermy</h1>
+          <div class="h-1 w-20 bg-indigo-500 rounded" bis_skin_checked="1"></div>
+        </div>
+        <p class="lg:w-1/2 w-full leading-relaxed text-gray-500">Whatever cardigan tote bag tumblr hexagon brooklyn asymmetrical gentrify, subway tile poke farm-to-table. Franzen you probably haven't heard of them man bun deep jianbing selfies heirloom prism food truck ugh squid celiac humblebrag.</p>
+      </div>
+      
+      <div class="grid sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-6 xl:gap-8">
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1593508512255-86ab42a8e620?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Minh Pham" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">July 19, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">New trends in Tech</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1550745165-9bc0b252726f?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Lorenzo Herrera" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">April 07, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">Working with legacy stacks</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1542759564-7ccbb6ac450a?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Magicle" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">March 15, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">10 best smartphones for devs</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+
+        <!-- article - start -->
+        <a href="#" class="group h-48 md:h-64 xl:h-96 flex flex-col bg-gray-100 rounded-lg shadow-lg overflow-hidden relative">
+          <img src="https://images.unsplash.com/photo-1610465299996-30f240ac2b1c?auto=format&q=75&fit=crop&w=600" loading="lazy" alt="Photo by Martin Sanchez" class="w-full h-full object-cover object-center absolute inset-0 group-hover:scale-110 transition duration-200" />
+
+          <div class="bg-gradient-to-t from-gray-800 md:via-transparent to-transparent absolute inset-0 pointer-events-none"></div>
+
+          <div class="relative p-4 mt-auto">
+            <span class="block text-gray-200 text-sm">January 27, 2023</span>
+            <h2 class="text-white text-xl font-semibold transition duration-100 mb-2">8 High performance Notebooks</h2>
+
+            <span class="text-indigo-300 font-semibold">Read more</span>
+          </div>
+        </a>
+        <!-- article - end -->
+      </div>
+    </div>
+  </section>
+<!-- ------------- -->
+
+  
+  
+  <!-- Ads -->
+  <div class="mx-auto container py-12 px-6 xl:px-0 flex justify-center items-center flex-col">
+    <div class="flex justify-between bg-gray-50 dark:bg-gray-900 items-stretch flex-row">
+        <div class="flex items-center bg-gray-800 dark:bg-white justify-center">
+            <p class="transform flex flex-shrink-0 -rotate-90 text-2xl font-semibold tracking-wide leading-normal text-white dark:text-gray-800">50% OFF</p>
+        </div>
+        <div class="flex justify-center items-start flex-col xl:w-2/5 md:w-5/12 xl:px-7 px-6 md:px-0 md:py-0 py-5 ">
+            <div>
+                <p class="text-3xl xl:text-4xl font-semibold leading-9 text-gray-800 dark:text-white">Act before it’s too late!</p>
+            </div>
+            <div class="xl:mt-4 mt-2">
+                <p class="text-base xl:text-xl leading-7 text-gray-600 dark:text-white pr-4">Furniture that looks modern and is comfortable as well. Avail the 50% offer now.</p>
+            </div>
+        </div>
+        <div class="hidden md:block h-44 md:h-60 xl:h-72">
+            <img class="hidden h-full xl:block" src="https://i.ibb.co/xGZ4hRm/pexels-dmitry-zvolskiy-2082090-1.png" alt="pexels-dmitry-zvolskiy-2082090-1" />
+            <img class="xl:hidden h-full" src="https://i.ibb.co/KWgn5zQ/pexels-dmitry-zvolskiy-2082090-1-1.png" alt="pexels-dmitry-zvolskiy-2082090-1-1" />
+        </div>
+    </div>
+    <div class="md:hidden mt-6 w-full">
+        <img src="https://i.ibb.co/xGZ4hRm/pexels-dmitry-zvolskiy-2082090-1.png" alt="pexels-dmitry-zvolskiy-2082090-1" class="w-full" />
+    </div>
+  </div>                        
+
+
+  <!-- Footer -->
+  <div>
+    <div class="bg-gray-900 pt-4 sm:pt-10 lg:pt-12">
+    
+    <footer class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+
+      <!-- Subscribe -->
+      <div class="bg-indigo-500 rounded py-6 ">
+      <div class="max-w-screen-2xl px-4 md:px-8 mx-auto">
+        <div class="flex flex-col md:flex-row justify-between items-center gap-2">
+          <div class="text-center md:text-left mb-3 md:mb-0">
+            <span class="text-gray-100 font-bold uppercase tracking-widest">Newsletter</span>
+            <p class="text-indigo-200">Subscribe to our newsletter</p>
+          </div>
+  
+          <form class="w-full md:max-w-md flex gap-2">
+            <input placeholder="Email" class="w-full flex-1 bg-indigo-400 text-white placeholder-indigo-100 border border-white focus:ring ring-indigo-300 rounded outline-none transition duration-100 px-3 py-2" />
+  
+            <button class="inline-block bg-white hover:bg-gray-100 focus-visible:ring ring-indigo-300 text-indigo-500 active:text-indigo-600 text-sm md:text-base font-semibold text-center rounded outline-none transition duration-100 px-8 py-2">Send</button>
+          </form>
+        </div>
+      </div>
+    </div>
+
+      <div class="flex flex-col items-center pt-6">
+        <!-- nav - start -->
+        <nav class="flex flex-wrap justify-center md:justify-start gap-x-4 gap-y-2 md:gap-6 mb-4">
+          <a href="#" class="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">About</a>
+          <a href="#" class="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Our Team</a>
+          <a href="#" class="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Resource</a>
+          <a href="#" class="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Status</a>
+          <a href="#" class="text-gray-500 hover:text-indigo-500 active:text-indigo-600 transition duration-100">Blog</a>
+        </nav>
+        <!-- nav - end -->
+  
+        <!-- social - start -->
+        <div class="flex gap-4">
+          <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+            <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z" />
+            </svg>
+          </a>
+  
+          <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+            <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M24 4.557c-.883.392-1.832.656-2.828.775 1.017-.609 1.798-1.574 2.165-2.724-.951.564-2.005.974-3.127 1.195-.897-.957-2.178-1.555-3.594-1.555-3.179 0-5.515 2.966-4.797 6.045-4.091-.205-7.719-2.165-10.148-5.144-1.29 2.213-.669 5.108 1.523 6.574-.806-.026-1.566-.247-2.229-.616-.054 2.281 1.581 4.415 3.949 4.89-.693.188-1.452.232-2.224.084.626 1.956 2.444 3.379 4.6 3.419-2.07 1.623-4.678 2.348-7.29 2.04 2.179 1.397 4.768 2.212 7.548 2.212 9.142 0 14.307-7.721 13.995-14.646.962-.695 1.797-1.562 2.457-2.549z" />
+            </svg>
+          </a>
+  
+          <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+            <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M19 0h-14c-2.761 0-5 2.239-5 5v14c0 2.761 2.239 5 5 5h14c2.762 0 5-2.239 5-5v-14c0-2.761-2.238-5-5-5zm-11 19h-3v-11h3v11zm-1.5-12.268c-.966 0-1.75-.79-1.75-1.764s.784-1.764 1.75-1.764 1.75.79 1.75 1.764-.783 1.764-1.75 1.764zm13.5 12.268h-3v-5.604c0-3.368-4-3.113-4 0v5.604h-3v-11h3v1.765c1.396-2.586 7-2.777 7 2.476v6.759z" />
+            </svg>
+          </a>
+  
+          <a href="#" target="_blank" class="text-gray-400 hover:text-gray-500 active:text-gray-600 transition duration-100">
+            <svg class="w-5 h-5" width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.033-1.416-4.033-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z" />
+            </svg>
+          </a>
+        </div>
+        <!-- social - end -->
+      </div>
+  
+      <div class="text-gray-400 text-sm text-center py-8">© 2023- Present Sokun Sonamheng. All rights reserved.</div>
+    </footer>
+  </div>
+  </div>
+  <!-- ------ -->
+</body>
+</html>
